@@ -1,0 +1,2 @@
+﻿modelo,configuracion,epocas_reajuste,smape_cv_seleccion,smape_implementacion,mae_implementacion,rmse_implementacion,sesgo_medio_implementacion,correlacion_implementacion,media_real_implementacion,media_predicha_implementacion,hidden_channels,n_blocks
+TCN,Histórico,90,6.082054046408236,5.143478247576487,0.055827371784912885,0.08922631053687058,0.025827504694461823,0.9939351298463862,1.2059398889541626,1.2317674160003662,64,3

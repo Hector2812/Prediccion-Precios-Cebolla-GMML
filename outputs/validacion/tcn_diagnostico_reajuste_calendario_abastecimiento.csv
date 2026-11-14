@@ -1,0 +1,2 @@
+﻿modelo,configuracion,epocas_reajuste,smape_cv_seleccion,smape_implementacion,mae_implementacion,rmse_implementacion,sesgo_medio_implementacion,correlacion_implementacion,media_real_implementacion,media_predicha_implementacion,hidden_channels,n_blocks
+TCN,Calendario + abastecimiento,26,34.887390121119154,42.78830560624409,0.5374484313566033,0.7437294543956221,0.19977790117263794,0.39160869538071297,1.2059398889541626,1.4057178497314453,128,3

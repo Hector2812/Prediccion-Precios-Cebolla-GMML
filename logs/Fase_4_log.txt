@@ -1,0 +1,496 @@
+[2026-11-13 07:23:25] INICIO FASE 4
+Pruebas de métricas, NaN y equivalencia numérica: CORRECTAS.
+
+================================================================================
+FASE 4 - EVALUACIÓN FINAL, COMPARACIÓN ESTADÍSTICA E INTERPRETACIÓN
+================================================================================
+Dispositivo PyTorch: cuda
+Dataset: C:\Proyecto_Prediccion_Cebolla\data procesada\dataset_modelado_base.csv
+Artefactos de validación: C:\Proyecto_Prediccion_Cebolla\outputs\validacion
+Precios objetivo observados en prueba: 1072/1072
+Conjunto final de prueba: 1072 observaciones | origen 2023-09-25 a 2026-08-31 | objetivo 2023-09-26 a 2026-09-01
+
+--------------------------------------------------------------------------------
+LÍNEAS BASE
+--------------------------------------------------------------------------------
+Naive: 1072 pronósticos.
+SeasonalNaive_7: 1072 pronósticos.
+
+================================================================================
+EVALUACIÓN FINAL - Histórico
+================================================================================
+SARIMAX - Histórico: 1072 pronósticos.
+XGBoost - Histórico: 1072 pronósticos.
+LSTM - Histórico: 1072 pronósticos.
+TCN - Histórico: 1072 pronósticos.
+LSTM-XGBoost - Histórico: 1072 pronósticos.
+
+================================================================================
+EVALUACIÓN FINAL - Histórico + abastecimiento
+================================================================================
+SARIMAX - Histórico + abastecimiento: 1072 pronósticos.
+XGBoost - Histórico + abastecimiento: 1072 pronósticos.
+LSTM - Histórico + abastecimiento: 1072 pronósticos.
+TCN - Histórico + abastecimiento: 1072 pronósticos.
+LSTM-XGBoost - Histórico + abastecimiento: 1072 pronósticos.
+
+================================================================================
+MÉTRICAS DE EVALUACIÓN FINAL
+================================================================================
+         modelo              configuracion     smape      mae     rmse     mase       r2    n  objetivos_ausentes
+          Naive                 Referencia  3.068952 0.043713 0.076138 1.077955 0.978554 1072                   0
+SeasonalNaive_7                 Referencia 11.562388 0.179562 0.279038 4.427991 0.711957 1072                   0
+        SARIMAX                  Histórico  3.068952 0.043713 0.076138 1.077955 0.978554 1072                   0
+        XGBoost                  Histórico  3.431740 0.050129 0.079978 1.236175 0.976337 1072                   0
+           LSTM                  Histórico  3.440360 0.049432 0.078582 1.218985 0.977156 1072                   0
+            TCN                  Histórico  3.854431 0.055600 0.084829 1.371109 0.973379 1072                   0
+   LSTM-XGBoost                  Histórico  3.797994 0.057204 0.091117 1.410661 0.969286 1072                   0
+        SARIMAX Histórico + abastecimiento  3.070639 0.043736 0.076134 1.078526 0.978557 1072                   0
+        XGBoost Histórico + abastecimiento  3.426498 0.050191 0.079187 1.237714 0.976803 1072                   0
+           LSTM Histórico + abastecimiento  3.378676 0.048269 0.077171 1.190315 0.977969 1072                   0
+            TCN Histórico + abastecimiento  6.851632 0.093725 0.115928 2.311265 0.950283 1072                   0
+   LSTM-XGBoost Histórico + abastecimiento  3.815183 0.056898 0.089377 1.403102 0.970448 1072                   0
+
+================================================================================
+DIEBOLD-MARIANO CON VARIANZA HAC Y CORRECCIÓN DE HOLM
+================================================================================
+Familia modelos - Histórico:
+          familia configuracion modelo_A     modelo_B modelo_menor_perdida_cuadratica_media  dm_estadistico      p_valor  diferencial_perdida_medio_A_menos_B menor_perdida_cuadratica_media    n  hac_nlags  pares_temporales_ausentes  equivalencia_numerica  p_valor_holm  rechaza_h0_holm  alpha
+modelos_historico     Histórico  SARIMAX      XGBoost                               SARIMAX       -2.164688 3.041156e-02                            -0.000599                              A 1072          6                          0                  False      0.121646            False   0.05
+modelos_historico     Histórico  SARIMAX         LSTM                               SARIMAX       -2.574732 1.003178e-02                            -0.000378                              A 1072          6                          0                  False      0.060191            False   0.05
+modelos_historico     Histórico  SARIMAX          TCN                               SARIMAX       -5.000715 5.711817e-07                            -0.001399                              A 1072          6                          0                  False      0.000006             True   0.05
+modelos_historico     Histórico  SARIMAX LSTM-XGBoost                               SARIMAX       -3.510297 4.476056e-04                            -0.002505                              A 1072          6                          0                  False      0.003581             True   0.05
+modelos_historico     Histórico  XGBoost         LSTM                                  LSTM        0.669048 5.034647e-01                             0.000221                              B 1072          6                          0                  False      0.503465            False   0.05
+modelos_historico     Histórico  XGBoost          TCN                               XGBoost       -1.690256 9.097901e-02                            -0.000800                              A 1072          6                          0                  False      0.267429            False   0.05
+modelos_historico     Histórico  XGBoost LSTM-XGBoost                               XGBoost       -2.440509 1.466657e-02                            -0.001906                              A 1072          6                          0                  False      0.073333            False   0.05
+modelos_historico     Histórico     LSTM          TCN                                  LSTM       -3.731528 1.903217e-04                            -0.001021                              A 1072          6                          0                  False      0.001713             True   0.05
+modelos_historico     Histórico     LSTM LSTM-XGBoost                                  LSTM       -3.394882 6.865817e-04                            -0.002127                              A 1072          6                          0                  False      0.004806             True   0.05
+modelos_historico     Histórico      TCN LSTM-XGBoost                                   TCN       -1.699935 8.914314e-02                            -0.001106                              A 1072          6                          0                  False      0.267429            False   0.05
+
+Familia modelos - Histórico + abastecimiento:
+                         familia              configuracion modelo_A     modelo_B modelo_menor_perdida_cuadratica_media  dm_estadistico      p_valor  diferencial_perdida_medio_A_menos_B menor_perdida_cuadratica_media    n  hac_nlags  pares_temporales_ausentes  equivalencia_numerica  p_valor_holm  rechaza_h0_holm  alpha
+modelos_historico_abastecimiento Histórico + abastecimiento  SARIMAX      XGBoost                               SARIMAX       -1.389635 1.646398e-01                            -0.000474                              A 1072          6                          0                  False  4.939193e-01            False   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  SARIMAX         LSTM                               SARIMAX       -1.184332 2.362815e-01                            -0.000159                              A 1072          6                          0                  False  4.939193e-01            False   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  SARIMAX          TCN                               SARIMAX      -14.267582 3.484530e-46                            -0.007643                              A 1072          6                          0                  False  3.484530e-45             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  SARIMAX LSTM-XGBoost                               SARIMAX       -4.433586 9.267835e-06                            -0.002192                              A 1072          6                          0                  False  5.560701e-05             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  XGBoost         LSTM                                  LSTM        0.832062 4.053742e-01                             0.000315                              B 1072          6                          0                  False  4.939193e-01            False   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  XGBoost          TCN                               XGBoost       -9.881589 5.003330e-23                            -0.007169                              A 1072          6                          0                  False  4.002664e-22             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento  XGBoost LSTM-XGBoost                               XGBoost       -2.715925 6.609081e-03                            -0.001718                              A 1072          6                          0                  False  2.643633e-02             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento     LSTM          TCN                                  LSTM      -12.563134 3.367243e-36                            -0.007484                              A 1072          6                          0                  False  3.030519e-35             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento     LSTM LSTM-XGBoost                                  LSTM       -4.290990 1.778780e-05                            -0.002033                              A 1072          6                          0                  False  8.893901e-05             True   0.05
+modelos_historico_abastecimiento Histórico + abastecimiento      TCN LSTM-XGBoost                          LSTM-XGBoost        7.638511 2.197490e-14                             0.005451                              B 1072          6                          0                  False  1.538243e-13             True   0.05
+
+Histórico vs. Histórico + abastecimiento:
+                              familia       modelo configuracion_A            configuracion_B configuracion_menor_perdida_cuadratica_media  dm_estadistico      p_valor  diferencial_perdida_medio_A_menos_B menor_perdida_cuadratica_media    n  hac_nlags  pares_temporales_ausentes  equivalencia_numerica  p_valor_holm  rechaza_h0_holm  alpha
+historico_vs_historico_abastecimiento      SARIMAX       Histórico Histórico + abastecimiento                   Histórico + abastecimiento        0.947876 3.431925e-01                         5.955287e-07                              B 1072          6                          0                  False  1.000000e+00            False   0.05
+historico_vs_historico_abastecimiento      XGBoost       Histórico Histórico + abastecimiento                   Histórico + abastecimiento        0.942147 3.461176e-01                         1.259794e-04                              B 1072          6                          0                  False  1.000000e+00            False   0.05
+historico_vs_historico_abastecimiento         LSTM       Histórico Histórico + abastecimiento                   Histórico + abastecimiento        1.339477 1.804154e-01                         2.198609e-04                              B 1072          6                          0                  False  7.216617e-01            False   0.05
+historico_vs_historico_abastecimiento          TCN       Histórico Histórico + abastecimiento                                    Histórico      -16.918162 3.305872e-64                        -6.243186e-03                              A 1072          6                          0                  False  1.652936e-63             True   0.05
+historico_vs_historico_abastecimiento LSTM-XGBoost       Histórico Histórico + abastecimiento                   Histórico + abastecimiento        0.513670 6.074826e-01                         3.141098e-04                              B 1072          6                          0                  False  1.000000e+00            False   0.05
+Sensibilidad del ancho de banda HAC: descriptiva, sin reajustar hipótesis.
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_1_comparacion_smape_final.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_2_reales_vs_pronosticados.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_3_aporte_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_4_DM_Holm_matriz.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_4b_DM_Holm_vs_Naive.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_5_errores_cajas.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_5b_errores_por_anio.png
+Tablas de resultados, DM-Holm y figuras de desempeño generadas.
+
+================================================================================
+INTERPRETACIÓN DE MODELOS
+================================================================================
+
+--------------------------------------------------------------------------------
+TreeSHAP - XGBoost - Histórico
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_xgboost_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_xgboost_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_historico_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_historico_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_xgboost_historico.png
+
+--------------------------------------------------------------------------------
+TimeSHAP - LSTM - Histórico
+--------------------------------------------------------------------------------
+TimeSHAP: 30 secuencias de 14 días; se explica la ventana completa, sin poda temporal.
+  [1/30] Fecha objetivo 2023-09-26: calculando...
+      Completado en 0.1 s.
+  [2/30] Fecha objetivo 2023-11-01: calculando...
+      Completado en 0.1 s.
+  [3/30] Fecha objetivo 2023-12-08: calculando...
+      Completado en 0.0 s.
+  [4/30] Fecha objetivo 2024-01-14: calculando...
+      Completado en 0.0 s.
+  [5/30] Fecha objetivo 2024-02-20: calculando...
+      Completado en 0.0 s.
+  [6/30] Fecha objetivo 2024-03-28: calculando...
+      Completado en 0.0 s.
+  [7/30] Fecha objetivo 2024-05-04: calculando...
+      Completado en 0.0 s.
+  [8/30] Fecha objetivo 2024-06-10: calculando...
+      Completado en 0.0 s.
+  [9/30] Fecha objetivo 2024-07-17: calculando...
+      Completado en 0.0 s.
+  [10/30] Fecha objetivo 2024-08-23: calculando...
+      Completado en 0.0 s.
+  [11/30] Fecha objetivo 2024-09-29: calculando...
+      Completado en 0.0 s.
+  [12/30] Fecha objetivo 2024-11-05: calculando...
+      Completado en 0.0 s.
+  [13/30] Fecha objetivo 2024-12-12: calculando...
+      Completado en 0.0 s.
+  [14/30] Fecha objetivo 2025-01-18: calculando...
+      Completado en 0.0 s.
+  [15/30] Fecha objetivo 2025-02-24: calculando...
+      Completado en 0.0 s.
+  [16/30] Fecha objetivo 2025-04-01: calculando...
+      Completado en 0.0 s.
+  [17/30] Fecha objetivo 2025-05-08: calculando...
+      Completado en 0.1 s.
+  [18/30] Fecha objetivo 2025-06-14: calculando...
+      Completado en 0.0 s.
+  [19/30] Fecha objetivo 2025-07-21: calculando...
+      Completado en 0.1 s.
+  [20/30] Fecha objetivo 2025-08-27: calculando...
+      Completado en 0.0 s.
+  [21/30] Fecha objetivo 2025-10-03: calculando...
+      Completado en 0.0 s.
+  [22/30] Fecha objetivo 2025-11-09: calculando...
+      Completado en 0.0 s.
+  [23/30] Fecha objetivo 2025-12-16: calculando...
+      Completado en 0.1 s.
+  [24/30] Fecha objetivo 2026-01-22: calculando...
+      Completado en 0.0 s.
+  [25/30] Fecha objetivo 2026-02-28: calculando...
+      Completado en 0.1 s.
+  [26/30] Fecha objetivo 2026-04-06: calculando...
+      Completado en 0.0 s.
+  [27/30] Fecha objetivo 2026-05-13: calculando...
+      Completado en 0.0 s.
+  [28/30] Fecha objetivo 2026-06-19: calculando...
+      Completado en 0.0 s.
+  [29/30] Fecha objetivo 2026-07-26: calculando...
+      Completado en 0.0 s.
+  [30/30] Fecha objetivo 2026-09-01: calculando...
+      Completado en 0.0 s.
+TimeSHAP completado: 30 secuencias; 4 CSV guardados.
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_historico_caracteristicas_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_historico_eventos_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_historico_caracteristicas.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_historico_eventos.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TimeSHAP_global_local_historico.png
+
+--------------------------------------------------------------------------------
+Integrated Gradients - TCN - Histórico
+--------------------------------------------------------------------------------
+C:\Users\user\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\autograd\graph.py:869: UserWarning: Attempting to run cuBLAS, but there was no current CUDA context! Attempting to set the primary context... (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\cuda\CublasHandlePool.cpp:335.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9_IG_global_variables_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9b_IG_global_rezagos_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9c_IG_local_mapa_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_IG_global_local_historico.png
+
+--------------------------------------------------------------------------------
+Coeficientes - SARIMAX - Histórico
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+TreeSHAP - corrector residual LSTM-XGBoost - Histórico
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_hibrido_corrector_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_hibrido_corrector_historico.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_historico_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_historico_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_hibrido_corrector_historico.png
+
+--------------------------------------------------------------------------------
+TreeSHAP - XGBoost - Histórico + abastecimiento
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_xgboost_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_xgboost_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_historico_abastecimiento_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_historico_abastecimiento_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_xgboost_historico_abastecimiento.png
+
+--------------------------------------------------------------------------------
+TimeSHAP - LSTM - Histórico + abastecimiento
+--------------------------------------------------------------------------------
+TimeSHAP: 30 secuencias de 30 días; se explica la ventana completa, sin poda temporal.
+  [1/30] Fecha objetivo 2023-09-26: calculando...
+      Completado en 0.4 s.
+  [2/30] Fecha objetivo 2023-11-01: calculando...
+      Completado en 0.2 s.
+  [3/30] Fecha objetivo 2023-12-08: calculando...
+      Completado en 0.2 s.
+  [4/30] Fecha objetivo 2024-01-14: calculando...
+      Completado en 0.2 s.
+  [5/30] Fecha objetivo 2024-02-20: calculando...
+      Completado en 0.2 s.
+  [6/30] Fecha objetivo 2024-03-28: calculando...
+      Completado en 0.2 s.
+  [7/30] Fecha objetivo 2024-05-04: calculando...
+      Completado en 0.2 s.
+  [8/30] Fecha objetivo 2024-06-10: calculando...
+      Completado en 0.2 s.
+  [9/30] Fecha objetivo 2024-07-17: calculando...
+      Completado en 0.2 s.
+  [10/30] Fecha objetivo 2024-08-23: calculando...
+      Completado en 0.2 s.
+  [11/30] Fecha objetivo 2024-09-29: calculando...
+      Completado en 0.2 s.
+  [12/30] Fecha objetivo 2024-11-05: calculando...
+      Completado en 0.2 s.
+  [13/30] Fecha objetivo 2024-12-12: calculando...
+      Completado en 0.2 s.
+  [14/30] Fecha objetivo 2025-01-18: calculando...
+      Completado en 0.2 s.
+  [15/30] Fecha objetivo 2025-02-24: calculando...
+      Completado en 0.2 s.
+  [16/30] Fecha objetivo 2025-04-01: calculando...
+      Completado en 0.2 s.
+  [17/30] Fecha objetivo 2025-05-08: calculando...
+      Completado en 0.2 s.
+  [18/30] Fecha objetivo 2025-06-14: calculando...
+      Completado en 0.2 s.
+  [19/30] Fecha objetivo 2025-07-21: calculando...
+      Completado en 0.2 s.
+  [20/30] Fecha objetivo 2025-08-27: calculando...
+      Completado en 0.2 s.
+  [21/30] Fecha objetivo 2025-10-03: calculando...
+      Completado en 0.2 s.
+  [22/30] Fecha objetivo 2025-11-09: calculando...
+      Completado en 0.2 s.
+  [23/30] Fecha objetivo 2025-12-16: calculando...
+      Completado en 0.2 s.
+  [24/30] Fecha objetivo 2026-01-22: calculando...
+      Completado en 0.2 s.
+  [25/30] Fecha objetivo 2026-02-28: calculando...
+      Completado en 0.2 s.
+  [26/30] Fecha objetivo 2026-04-06: calculando...
+      Completado en 0.2 s.
+  [27/30] Fecha objetivo 2026-05-13: calculando...
+      Completado en 0.2 s.
+  [28/30] Fecha objetivo 2026-06-19: calculando...
+      Completado en 0.2 s.
+  [29/30] Fecha objetivo 2026-07-26: calculando...
+      Completado en 0.2 s.
+  [30/30] Fecha objetivo 2026-09-01: calculando...
+      Completado en 0.2 s.
+TimeSHAP completado: 30 secuencias; 4 CSV guardados.
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_historico_abastecimiento_caracteristicas_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_historico_abastecimiento_eventos_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_historico_abastecimiento_caracteristicas.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_historico_abastecimiento_eventos.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TimeSHAP_global_local_historico_abastecimiento.png
+
+--------------------------------------------------------------------------------
+Integrated Gradients - TCN - Histórico + abastecimiento
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9_IG_global_variables_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9b_IG_global_rezagos_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9c_IG_local_mapa_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_IG_global_local_historico_abastecimiento.png
+
+--------------------------------------------------------------------------------
+Coeficientes - SARIMAX - Histórico + abastecimiento
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_10_SARIMAX_parametros_historico_abastecimiento.png
+
+--------------------------------------------------------------------------------
+TreeSHAP - corrector residual LSTM-XGBoost - Histórico + abastecimiento
+--------------------------------------------------------------------------------
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_hibrido_corrector_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_hibrido_corrector_historico_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_historico_abastecimiento_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_historico_abastecimiento_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_hibrido_corrector_historico_abastecimiento.png
+
+================================================================================
+FASE 4 - ABLACIÓN Y EXPLICABILIDAD SIN HISTORIAL DEL PRECIO
+================================================================================
+
+--------------------------------------------------------------------------------
+Evaluación sin precio - Calendario
+--------------------------------------------------------------------------------
+Calendario: cuatro modelos evaluados en 1072 fechas; sin precio como predictor.
+
+--------------------------------------------------------------------------------
+Evaluación sin precio - Calendario + abastecimiento
+--------------------------------------------------------------------------------
+Calendario + abastecimiento: cuatro modelos evaluados en 1072 fechas; sin precio como predictor.
+Explicabilidad sin precio - Calendario
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_xgboost_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_xgboost_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_calendario_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_calendario_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_xgboost_calendario.png
+TimeSHAP: 30 secuencias de 30 días; se explica la ventana completa, sin poda temporal.
+  [1/30] Fecha objetivo 2023-09-26: calculando...
+      Completado en 0.1 s.
+  [2/30] Fecha objetivo 2023-11-01: calculando...
+      Completado en 0.1 s.
+  [3/30] Fecha objetivo 2023-12-08: calculando...
+      Completado en 0.1 s.
+  [4/30] Fecha objetivo 2024-01-14: calculando...
+      Completado en 0.1 s.
+  [5/30] Fecha objetivo 2024-02-20: calculando...
+      Completado en 0.1 s.
+  [6/30] Fecha objetivo 2024-03-28: calculando...
+      Completado en 0.1 s.
+  [7/30] Fecha objetivo 2024-05-04: calculando...
+      Completado en 0.1 s.
+  [8/30] Fecha objetivo 2024-06-10: calculando...
+      Completado en 0.1 s.
+  [9/30] Fecha objetivo 2024-07-17: calculando...
+      Completado en 0.1 s.
+  [10/30] Fecha objetivo 2024-08-23: calculando...
+      Completado en 0.1 s.
+  [11/30] Fecha objetivo 2024-09-29: calculando...
+      Completado en 0.1 s.
+  [12/30] Fecha objetivo 2024-11-05: calculando...
+      Completado en 0.1 s.
+  [13/30] Fecha objetivo 2024-12-12: calculando...
+      Completado en 0.1 s.
+  [14/30] Fecha objetivo 2025-01-18: calculando...
+      Completado en 0.1 s.
+  [15/30] Fecha objetivo 2025-02-24: calculando...
+      Completado en 0.1 s.
+  [16/30] Fecha objetivo 2025-04-01: calculando...
+      Completado en 0.1 s.
+  [17/30] Fecha objetivo 2025-05-08: calculando...
+      Completado en 0.1 s.
+  [18/30] Fecha objetivo 2025-06-14: calculando...
+      Completado en 0.1 s.
+  [19/30] Fecha objetivo 2025-07-21: calculando...
+      Completado en 0.1 s.
+  [20/30] Fecha objetivo 2025-08-27: calculando...
+      Completado en 0.1 s.
+  [21/30] Fecha objetivo 2025-10-03: calculando...
+      Completado en 0.1 s.
+  [22/30] Fecha objetivo 2025-11-09: calculando...
+      Completado en 0.1 s.
+  [23/30] Fecha objetivo 2025-12-16: calculando...
+      Completado en 0.1 s.
+  [24/30] Fecha objetivo 2026-01-22: calculando...
+      Completado en 0.1 s.
+  [25/30] Fecha objetivo 2026-02-28: calculando...
+      Completado en 0.1 s.
+  [26/30] Fecha objetivo 2026-04-06: calculando...
+      Completado en 0.1 s.
+  [27/30] Fecha objetivo 2026-05-13: calculando...
+      Completado en 0.1 s.
+  [28/30] Fecha objetivo 2026-06-19: calculando...
+      Completado en 0.1 s.
+  [29/30] Fecha objetivo 2026-07-26: calculando...
+      Completado en 0.1 s.
+  [30/30] Fecha objetivo 2026-09-01: calculando...
+      Completado en 0.1 s.
+TimeSHAP completado: 30 secuencias; 4 CSV guardados.
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_calendario_caracteristicas_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_calendario_eventos_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_calendario_caracteristicas.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_calendario_eventos.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TimeSHAP_global_local_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9_IG_global_variables_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9b_IG_global_rezagos_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9c_IG_local_mapa_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_IG_global_local_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_hibrido_corrector_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_hibrido_corrector_calendario.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_calendario_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_calendario_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_hibrido_corrector_calendario.png
+Explicabilidad sin precio - Calendario + abastecimiento
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_xgboost_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_xgboost_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_calendario_abastecimiento_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_xgboost_calendario_abastecimiento_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_xgboost_calendario_abastecimiento.png
+TimeSHAP: 30 secuencias de 60 días; se explica la ventana completa, sin poda temporal.
+  [1/30] Fecha objetivo 2023-09-26: calculando...
+      Completado en 0.3 s.
+  [2/30] Fecha objetivo 2023-11-01: calculando...
+      Completado en 0.1 s.
+  [3/30] Fecha objetivo 2023-12-08: calculando...
+      Completado en 0.1 s.
+  [4/30] Fecha objetivo 2024-01-14: calculando...
+      Completado en 0.1 s.
+  [5/30] Fecha objetivo 2024-02-20: calculando...
+      Completado en 0.1 s.
+  [6/30] Fecha objetivo 2024-03-28: calculando...
+      Completado en 0.1 s.
+  [7/30] Fecha objetivo 2024-05-04: calculando...
+      Completado en 0.1 s.
+  [8/30] Fecha objetivo 2024-06-10: calculando...
+      Completado en 0.1 s.
+  [9/30] Fecha objetivo 2024-07-17: calculando...
+      Completado en 0.1 s.
+  [10/30] Fecha objetivo 2024-08-23: calculando...
+      Completado en 0.1 s.
+  [11/30] Fecha objetivo 2024-09-29: calculando...
+      Completado en 0.1 s.
+  [12/30] Fecha objetivo 2024-11-05: calculando...
+      Completado en 0.1 s.
+  [13/30] Fecha objetivo 2024-12-12: calculando...
+      Completado en 0.1 s.
+  [14/30] Fecha objetivo 2025-01-18: calculando...
+      Completado en 0.1 s.
+  [15/30] Fecha objetivo 2025-02-24: calculando...
+      Completado en 0.1 s.
+  [16/30] Fecha objetivo 2025-04-01: calculando...
+      Completado en 0.1 s.
+  [17/30] Fecha objetivo 2025-05-08: calculando...
+      Completado en 0.1 s.
+  [18/30] Fecha objetivo 2025-06-14: calculando...
+      Completado en 0.1 s.
+  [19/30] Fecha objetivo 2025-07-21: calculando...
+      Completado en 0.1 s.
+  [20/30] Fecha objetivo 2025-08-27: calculando...
+      Completado en 0.1 s.
+  [21/30] Fecha objetivo 2025-10-03: calculando...
+      Completado en 0.1 s.
+  [22/30] Fecha objetivo 2025-11-09: calculando...
+      Completado en 0.1 s.
+  [23/30] Fecha objetivo 2025-12-16: calculando...
+      Completado en 0.1 s.
+  [24/30] Fecha objetivo 2026-01-22: calculando...
+      Completado en 0.1 s.
+  [25/30] Fecha objetivo 2026-02-28: calculando...
+      Completado en 0.1 s.
+  [26/30] Fecha objetivo 2026-04-06: calculando...
+      Completado en 0.1 s.
+  [27/30] Fecha objetivo 2026-05-13: calculando...
+      Completado en 0.1 s.
+  [28/30] Fecha objetivo 2026-06-19: calculando...
+      Completado en 0.1 s.
+  [29/30] Fecha objetivo 2026-07-26: calculando...
+      Completado en 0.1 s.
+  [30/30] Fecha objetivo 2026-09-01: calculando...
+      Completado en 0.1 s.
+TimeSHAP completado: 30 secuencias; 4 CSV guardados.
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_calendario_abastecimiento_caracteristicas_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_global_calendario_abastecimiento_eventos_global.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_calendario_abastecimiento_caracteristicas.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_8_TimeSHAP_local_calendario_abastecimiento_eventos.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TimeSHAP_global_local_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9_IG_global_variables_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9b_IG_global_rezagos_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_9c_IG_local_mapa_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_IG_global_local_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6_SHAP_global_hibrido_corrector_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_6b_SHAP_beeswarm_hibrido_corrector_calendario_abastecimiento.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_calendario_abastecimiento_representativo.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_6_7_SHAP_local_hibrido_corrector_calendario_abastecimiento_error_alto.png
+Figura generada: C:\Proyecto_Prediccion_Cebolla\Figuras\resultados_discusion\Figura_articulo_TreeSHAP_global_local_hibrido_corrector_calendario_abastecimiento.png
+Ablación, DM-Holm, TreeSHAP, TimeSHAP e Integrated Gradients guardados.
+
+================================================================================
+FASE 4 COMPLETADA
+================================================================================
+Predicciones: C:\Proyecto_Prediccion_Cebolla\outputs\evaluacion_final\predicciones_evaluacion_final.csv
+Métricas: C:\Proyecto_Prediccion_Cebolla\outputs\evaluacion_final\metricas_evaluacion_final.csv
+Contrastes DM: C:\Proyecto_Prediccion_Cebolla\outputs\evaluacion_final
+Explicabilidad: C:\Proyecto_Prediccion_Cebolla\outputs\evaluacion_final\explicabilidad
+Tiempo total: 2.1 minutos.
+[2026-11-13 07:25:33] FIN FASE 4 | estado=COMPLETADA | duración=0:02:08.339531

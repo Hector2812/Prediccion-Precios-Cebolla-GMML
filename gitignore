@@ -1,0 +1,17 @@
+# Caché y archivos temporales de Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Entornos virtuales locales
+.venv/
+venv/
+
+# Variables de entorno y credenciales locales
+.env
+.env.*
+!.env.example
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db

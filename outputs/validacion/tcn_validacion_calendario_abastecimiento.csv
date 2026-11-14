@@ -1,0 +1,6 @@
+﻿modelo,configuracion,fold,smape,mae,rmse,n,epoca_optima,epocas_ejecutadas,alcanzo_techo,hidden_channels,n_blocks,n_capas_convolucionales,campo_receptivo,epocas_reajuste_mediana
+TCN,Calendario + abastecimiento,1,28.288272073794673,0.3636093253947117,0.5053527077950057,704,26,36,False,128,3,6,57,26
+TCN,Calendario + abastecimiento,2,36.76620540518754,0.37277819257224176,0.4916910103118335,691,3,13,False,128,3,6,57,26
+TCN,Calendario + abastecimiento,3,42.97030205050267,0.4583819924699826,0.533300061898821,714,1,11,False,128,3,6,57,26
+TCN,Calendario + abastecimiento,4,28.983097022138054,0.28406526102405305,0.3373298153474875,714,90,100,False,128,3,6,57,26
+TCN,Calendario + abastecimiento,5,37.42907405397285,0.7573297112510445,1.3258706494684904,712,82,92,False,128,3,6,57,26

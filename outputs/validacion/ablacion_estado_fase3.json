@@ -1,0 +1,18 @@
+{
+  "estado": "COMPLETADA",
+  "fecha": "2026-11-13T05:23:54",
+  "escenarios": [
+    "Calendario",
+    "Calendario + abastecimiento"
+  ],
+  "modelos": [
+    "XGBoost",
+    "LSTM",
+    "TCN",
+    "LSTM-XGBoost"
+  ],
+  "semilla": 42,
+  "protocolo": "mismo 80/20 y TimeSeriesSplit expansivo de cinco folds",
+  "prueba_final_utilizada_en_seleccion": false,
+  "sha256_dataset": "8f3d3ba583c58ceefb1547b5b1ad8b3243b939fa1fcc17d39a8242f9b539a308"
+}

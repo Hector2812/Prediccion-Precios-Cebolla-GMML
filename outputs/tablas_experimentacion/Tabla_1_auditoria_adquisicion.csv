@@ -1,0 +1,3 @@
+﻿variable,periodo_inicio,periodo_fin,dias_calendario,dias_observados,dias_faltantes,porcentaje_faltante,min_observado,media_observada,max_observado
+precio_promedio_soles_kg,2012-01-01,2026-09-01,5358,5316,42,0.7839,0.23,1.2562133182844244,6.3
+volumen_toneladas,2012-01-01,2026-09-01,5358,5316,42,0.7839,0.0,535.8231753197894,2648.0

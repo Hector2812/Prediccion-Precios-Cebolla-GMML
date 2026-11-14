@@ -1,0 +1,16 @@
+{
+  "version": "Fase2_preprocesamiento_causal_v4_seleccion_alpha",
+  "alpha_ewma": 0.1,
+  "regla_seleccion_alpha": "minimo_MAE_promedio_equilibrado_por_duracion",
+  "seleccion_alpha_archivo": "seleccion_alpha_ewma.json",
+  "sha256_seleccion_alpha": "f6707534c68e7507ffb9f9c9526d3e46ff07c51cd254a4d1a212fdaf10dc3147",
+  "n_filas_calibracion_alpha": 4285,
+  "metodo_precio": "LOCF_solo_predictor",
+  "metodo_volumen": "EWMA_solo_predictor",
+  "objetivo": "precio_original_t+1_sin_imputacion",
+  "fecha_generacion": "2026-11-12T23:20:56",
+  "n_filas": 5357,
+  "n_objetivos_reales": 5315,
+  "sha256_dataset": "8f3d3ba583c58ceefb1547b5b1ad8b3243b939fa1fcc17d39a8242f9b539a308",
+  "sha256_consolidado": "dc220fe7ef450e5c59960db81f918ab94fe1fe4e38cce0e155436a933f3be5d7"
+}

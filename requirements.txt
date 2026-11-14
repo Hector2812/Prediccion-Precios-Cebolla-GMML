@@ -1,0 +1,28 @@
+# Dependencias de todo el proyecto: Fases 1-4 y modulos 3b/4b de ablacion.
+# Entorno original: Python 3.14.4, Windows, PyTorch 2.11.0+cu130 (CUDA 13.0).
+# ATENCION: el paquete torch fijado abajo no garantiza instalacion con GPU.
+# Para CUDA, consultar el selector oficial de PyTorch y el README.md.
+
+# Manipulacion de datos, calculo numerico y metricas
+numpy==2.4.4
+pandas==2.3.3
+scipy==1.17.1
+scikit-learn==1.8.0
+statsmodels==0.14.6
+joblib==1.5.3
+
+# Modelos, optimizacion y redes profundas
+xgboost==3.2.0
+optuna==4.9.0
+torch==2.11.0
+
+# Interpretabilidad / explicabilidad de la Fase 4
+shap==0.52.0
+timeshap==1.0.4
+
+# Graficos, descarga SISAP y lectura de los reportes .xls (tablas HTML)
+matplotlib
+selenium
+lxml
+beautifulsoup4
+html5lib

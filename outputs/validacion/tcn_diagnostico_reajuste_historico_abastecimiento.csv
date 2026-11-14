@@ -1,0 +1,2 @@
+﻿modelo,configuracion,epocas_reajuste,smape_cv_seleccion,smape_implementacion,mae_implementacion,rmse_implementacion,sesgo_medio_implementacion,correlacion_implementacion,media_real_implementacion,media_predicha_implementacion,hidden_channels,n_blocks
+TCN,Histórico + abastecimiento,96,5.347268395991369,9.928905149281238,0.09823419893286871,0.1193917600567225,0.08453972637653351,0.994308125318037,1.2059398889541626,1.2904796600341797,128,4

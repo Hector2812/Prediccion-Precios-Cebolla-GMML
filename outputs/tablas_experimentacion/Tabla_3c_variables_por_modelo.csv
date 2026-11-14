@@ -1,0 +1,15 @@
+﻿modelo,configuracion,grupos_de_entradas,calendario_ciclico
+Naive,Histórico,precio histórico,No
+SeasonalNaive_7,Histórico,precio histórico,No
+SARIMAX,Histórico,precio histórico solamente,"No, no tiene senos/cosenos explícitos"
+XGBoost,Histórico,"precio, calendario",Sí
+LSTM,Histórico,"precio, calendario",Sí
+TCN,Histórico,"precio, calendario",Sí
+LSTM-XGBoost,Histórico,"precio, calendario",Sí
+Naive,Histórico + abastecimiento,precio histórico,No
+SeasonalNaive_7,Histórico + abastecimiento,precio histórico,No
+SARIMAX,Histórico + abastecimiento,precio histórico + abastecimiento contemporáneo,"No, no tiene senos/cosenos explícitos"
+XGBoost,Histórico + abastecimiento,"precio, calendario, abastecimiento",Sí
+LSTM,Histórico + abastecimiento,"precio, calendario, abastecimiento",Sí
+TCN,Histórico + abastecimiento,"precio, calendario, abastecimiento",Sí
+LSTM-XGBoost,Histórico + abastecimiento,"precio, calendario, abastecimiento",Sí

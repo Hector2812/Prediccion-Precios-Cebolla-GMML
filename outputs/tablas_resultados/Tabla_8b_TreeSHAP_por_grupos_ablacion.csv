@@ -1,0 +1,13 @@
+﻿configuracion,configuracion_slug,grupo,suma_shap_abs_medio_S_kg,porcentaje_shap_abs_dentro_modelo,n_variables
+Histórico,historico,Precio,0.45339198364702127,99.18438194127017,13
+Histórico,historico,Calendario,0.003728356040619594,0.8156180587298417,6
+Histórico,historico,Abastecimiento,0.0,0.0,0
+Histórico + abastecimiento,historico_abastecimiento,Precio,0.4524847065731988,98.8033093993386,13
+Histórico + abastecimiento,historico_abastecimiento,Calendario,0.0031223903886993597,0.6817965318133405,6
+Histórico + abastecimiento,historico_abastecimiento,Abastecimiento,0.002358035303426248,0.5148940688480425,4
+Calendario,calendario,Precio,0.0,0.0,0
+Calendario,calendario,Calendario,0.33950256557365954,100.0,6
+Calendario,calendario,Abastecimiento,0.0,0.0,0
+Calendario + abastecimiento,calendario_abastecimiento,Precio,0.0,0.0,0
+Calendario + abastecimiento,calendario_abastecimiento,Calendario,0.28849474619258686,94.75910394213993,6
+Calendario + abastecimiento,calendario_abastecimiento,Abastecimiento,0.0159559442326226,5.240896057860081,4

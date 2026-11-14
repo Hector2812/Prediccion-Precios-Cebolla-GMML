@@ -1,0 +1,21 @@
+﻿modelo_A,modelo_B,familia,configuracion,dm_estadistico,p_valor,diferencial_perdida_medio_A_menos_B,menor_perdida_cuadratica_media,n,hac_nlags,pares_temporales_ausentes,equivalencia_numerica,p_valor_holm,rechaza_h0_holm,alpha
+SARIMAX,Naive,modelos_vs_baselines_historico,Histórico,0.0,1.0,0.0,Igual,1072,6,0,True,1.0,False,0.05
+XGBoost,Naive,modelos_vs_baselines_historico,Histórico,2.1646882947093995,0.030411564088638873,0.0005994723377339786,B,1072,6,0,False,0.060823128177277745,False,0.05
+LSTM,Naive,modelos_vs_baselines_historico,Histórico,2.57473210381631,0.010031775326545403,0.00037815676405626296,B,1072,6,0,False,0.03009532597963621,True,0.05
+TCN,Naive,modelos_vs_baselines_historico,Histórico,5.000714740275146,5.711817002696826e-07,0.0013990180220243259,B,1072,6,0,False,5.711817002696826e-06,True,0.05
+LSTM-XGBoost,Naive,modelos_vs_baselines_historico,Histórico,3.5102974688569435,0.0004476056462170475,0.0025053133488569276,B,1072,6,0,False,0.00179042258486819,True,0.05
+SARIMAX,SeasonalNaive_7,modelos_vs_baselines_historico,Histórico,-4.184672243208079,2.8557784213852562e-05,-0.07206501865671643,A,1072,6,0,False,0.0002501808279341133,True,0.05
+XGBoost,SeasonalNaive_7,modelos_vs_baselines_historico,Histórico,-4.190795029817261,2.7797869770457037e-05,-0.07146554631898244,A,1072,6,0,False,0.0002501808279341133,True,0.05
+LSTM,SeasonalNaive_7,modelos_vs_baselines_historico,Histórico,-4.164265563895187,3.1235638600494515e-05,-0.07168686189266016,A,1072,6,0,False,0.0002501808279341133,True,0.05
+TCN,SeasonalNaive_7,modelos_vs_baselines_historico,Histórico,-4.103155032703708,4.0755395175818106e-05,-0.0706660006346921,A,1072,6,0,False,0.0002501808279341133,True,0.05
+LSTM-XGBoost,SeasonalNaive_7,modelos_vs_baselines_historico,Histórico,-4.065593870361432,4.791030516675124e-05,-0.06955970530785949,A,1072,6,0,False,0.0002501808279341133,True,0.05
+SARIMAX,Naive,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-0.947876080319215,0.3431925433630131,-5.955287347308279e-07,A,1072,6,0,False,0.49565072106526487,False,0.05
+XGBoost,Naive,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,1.3877377809099052,0.16521690702175496,0.00047349293153498316,B,1072,6,0,False,0.49565072106526487,False,0.05
+LSTM,Naive,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,1.178840229797782,0.23846180162265285,0.0001582958992306674,B,1072,6,0,False,0.49565072106526487,False,0.05
+TCN,Naive,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,14.264416169976952,3.646306946172036e-46,0.007642203940589129,B,1072,6,0,False,3.6463069461720355e-45,True,0.05
+LSTM-XGBoost,Naive,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,4.431382003927313,9.36310451781538e-06,0.002191203552379892,B,1072,6,0,False,8.426794066033842e-05,True,0.05
+SARIMAX,SeasonalNaive_7,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-4.184700128475971,2.8554278959078274e-05,-0.07206561418545115,A,1072,6,0,False,0.00021246170384160292,True,0.05
+XGBoost,SeasonalNaive_7,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-4.201137580225188,2.6557712980200365e-05,-0.07159152572518145,A,1072,6,0,False,0.00021246170384160292,True,0.05
+LSTM,SeasonalNaive_7,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-4.165331357204551,3.1090067259327884e-05,-0.07190672275748575,A,1072,6,0,False,0.00021246170384160292,True,0.05
+TCN,SeasonalNaive_7,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-3.736217995032338,0.00018680873455458434,-0.06442281471612729,A,1072,6,0,False,0.0007472349382183374,True,0.05
+LSTM-XGBoost,SeasonalNaive_7,modelos_vs_baselines_historico_abastecimiento,Histórico + abastecimiento,-4.071533434255035,4.6704656898735696e-05,-0.06987381510433652,A,1072,6,0,False,0.00023352328449367847,True,0.05

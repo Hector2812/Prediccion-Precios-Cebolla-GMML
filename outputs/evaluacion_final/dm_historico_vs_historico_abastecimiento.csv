@@ -1,0 +1,6 @@
+﻿familia,modelo,configuracion_A,configuracion_B,configuracion_menor_perdida_cuadratica_media,dm_estadistico,p_valor,diferencial_perdida_medio_A_menos_B,menor_perdida_cuadratica_media,n,hac_nlags,pares_temporales_ausentes,equivalencia_numerica,p_valor_holm,rechaza_h0_holm,alpha
+historico_vs_historico_abastecimiento,SARIMAX,Histórico,Histórico + abastecimiento,Histórico + abastecimiento,0.9478760803192523,0.3431925433629941,5.955287347308508e-07,B,1072,6,0,False,1.0,False,0.05
+historico_vs_historico_abastecimiento,XGBoost,Histórico,Histórico + abastecimiento,Histórico + abastecimiento,0.9421466002472201,0.3461175889713922,0.00012597940619899541,B,1072,6,0,False,1.0,False,0.05
+historico_vs_historico_abastecimiento,LSTM,Histórico,Histórico + abastecimiento,Histórico + abastecimiento,1.3394770236201916,0.1804154294194098,0.00021986086482559563,B,1072,6,0,False,0.7216617176776392,False,0.05
+historico_vs_historico_abastecimiento,TCN,Histórico,Histórico + abastecimiento,Histórico,-16.91816200055975,3.305872323589885e-64,-0.006243185918564804,A,1072,6,0,False,1.6529361617949425e-63,True,0.05
+historico_vs_historico_abastecimiento,LSTM-XGBoost,Histórico,Histórico + abastecimiento,Histórico + abastecimiento,0.513670160631933,0.6074826175479768,0.0003141097964770357,B,1072,6,0,False,1.0,False,0.05

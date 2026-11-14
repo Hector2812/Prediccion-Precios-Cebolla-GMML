@@ -1,0 +1,324 @@
+{
+  "SARIMAX_historico": {
+    "candidato": 5,
+    "order": [
+      0,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "valido_cinco_folds": true,
+    "smape_promedio": 3.6187622845422696
+  },
+  "XGBoost_historico": {
+    "max_depth": 3,
+    "learning_rate": 0.008997846325998161,
+    "min_child_weight": 3,
+    "n_estimators": 500,
+    "subsample": 0.6166067176983718,
+    "colsample_bytree": 0.992365921246379,
+    "reg_alpha": 0.021495008010551247,
+    "reg_lambda": 0.2643833820197613,
+    "smape_validacion": 5.664217212563793
+  },
+  "LSTM_historico": {
+    "window": 14,
+    "hidden_size": 50,
+    "num_layers": 1,
+    "dropout": 0.11089454407406686,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epocas_reajuste": 182,
+    "smape_validacion": 4.788659068016011
+  },
+  "TCN_historico": {
+    "window": 15,
+    "hidden_channels": 64,
+    "n_blocks": 3,
+    "kernel_size": 3,
+    "dropout": 0.3,
+    "n_capas_convolucionales": 6,
+    "dilataciones": [
+      1,
+      2,
+      4
+    ],
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "variables_calendario": true,
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "epocas_optimas_folds": [
+      44,
+      96,
+      96,
+      90,
+      11
+    ],
+    "epocas_reajuste": 90,
+    "regla_epocas_reajuste": "mediana de best_epoch de los 5 folds del mejor trial",
+    "campo_receptivo": 29,
+    "smape_validacion": 6.082054046408236
+  },
+  "LSTM-XGBoost_historico": {
+    "lstm": {
+      "window": 14,
+      "hidden_size": 50,
+      "num_layers": 1,
+      "dropout": 0.11089454407406686,
+      "batch_size": 64
+    },
+    "xgboost_residual": {
+      "max_depth": 2,
+      "learning_rate": 0.05499311340611669,
+      "min_child_weight": 5,
+      "n_estimators": 450,
+      "subsample": 0.5385577514297872,
+      "colsample_bytree": 0.7614358708442287,
+      "reg_alpha": 0.18072417836598043,
+      "reg_lambda": 9.946126450457445
+    },
+    "smape_validacion": 12.982663108818503,
+    "seleccion_anidada_lstm_por_fold": true
+  },
+  "SARIMAX_historico_abastecimiento": {
+    "candidato": 5,
+    "order": [
+      0,
+      1,
+      0
+    ],
+    "seasonal_order": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "valido_cinco_folds": true,
+    "smape_promedio": 3.643335295770109
+  },
+  "XGBoost_historico_abastecimiento": {
+    "max_depth": 3,
+    "learning_rate": 0.008997846325998161,
+    "min_child_weight": 3,
+    "n_estimators": 500,
+    "subsample": 0.6166067176983718,
+    "colsample_bytree": 0.992365921246379,
+    "reg_alpha": 0.021495008010551247,
+    "reg_lambda": 0.2643833820197613,
+    "smape_validacion": 5.653453875623716
+  },
+  "LSTM_historico_abastecimiento": {
+    "window": 30,
+    "hidden_size": 150,
+    "num_layers": 1,
+    "dropout": 0.3412118913762499,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epocas_reajuste": 133,
+    "smape_validacion": 4.84521959165226
+  },
+  "TCN_historico_abastecimiento": {
+    "window": 15,
+    "hidden_channels": 128,
+    "n_blocks": 4,
+    "kernel_size": 5,
+    "dropout": 0.4,
+    "n_capas_convolucionales": 8,
+    "dilataciones": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "variables_calendario": true,
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "epocas_optimas_folds": [
+      98,
+      98,
+      96,
+      57,
+      17
+    ],
+    "epocas_reajuste": 96,
+    "regla_epocas_reajuste": "mediana de best_epoch de los 5 folds del mejor trial",
+    "campo_receptivo": 121,
+    "smape_validacion": 5.347268395991369
+  },
+  "LSTM-XGBoost_historico_abastecimiento": {
+    "lstm": {
+      "window": 30,
+      "hidden_size": 150,
+      "num_layers": 1,
+      "dropout": 0.3412118913762499,
+      "batch_size": 64
+    },
+    "xgboost_residual": {
+      "max_depth": 2,
+      "learning_rate": 0.06418126864394627,
+      "min_child_weight": 9,
+      "n_estimators": 450,
+      "subsample": 0.6445952696723076,
+      "colsample_bytree": 0.9317856163044475,
+      "reg_alpha": 0.1263399535038864,
+      "reg_lambda": 0.07670340181172766
+    },
+    "smape_validacion": 13.957372603119376,
+    "seleccion_anidada_lstm_por_fold": true
+  },
+  "XGBoost_calendario": {
+    "max_depth": 2,
+    "learning_rate": 0.02076246351239025,
+    "min_child_weight": 9,
+    "n_estimators": 250,
+    "subsample": 0.9147250739525183,
+    "colsample_bytree": 0.8170064962868606,
+    "reg_alpha": 0.0022136913901250432,
+    "reg_lambda": 0.01309391318530294,
+    "smape_validacion": 36.80436322392387
+  },
+  "LSTM_calendario": {
+    "window": 30,
+    "hidden_size": 80,
+    "num_layers": 1,
+    "dropout": 0.35815357027749617,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epocas_reajuste": 3,
+    "smape_validacion": 35.02784936081841
+  },
+  "TCN_calendario": {
+    "window": 60,
+    "hidden_channels": 64,
+    "n_blocks": 4,
+    "kernel_size": 5,
+    "dropout": 0.3,
+    "n_capas_convolucionales": 8,
+    "dilataciones": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "variables_calendario": true,
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "epocas_optimas_folds": [
+      55,
+      1,
+      2,
+      13,
+      21
+    ],
+    "epocas_reajuste": 13,
+    "regla_epocas_reajuste": "mediana de best_epoch de los 5 folds del mejor trial",
+    "campo_receptivo": 121,
+    "smape_validacion": 34.559138917806216
+  },
+  "LSTM-XGBoost_calendario": {
+    "lstm": {
+      "window": 30,
+      "hidden_size": 80,
+      "num_layers": 1,
+      "dropout": 0.35815357027749617,
+      "batch_size": 64
+    },
+    "xgboost_residual": {
+      "max_depth": 3,
+      "learning_rate": 0.009351426277421878,
+      "min_child_weight": 4,
+      "n_estimators": 350,
+      "subsample": 0.5269889330532985,
+      "colsample_bytree": 0.9996623950084471,
+      "reg_alpha": 0.02639857487983364,
+      "reg_lambda": 0.40806072881474864
+    },
+    "smape_validacion": 41.22372847200132,
+    "seleccion_anidada_lstm_por_fold": true
+  },
+  "XGBoost_calendario_abastecimiento": {
+    "max_depth": 2,
+    "learning_rate": 0.0075998841098945365,
+    "min_child_weight": 6,
+    "n_estimators": 350,
+    "subsample": 0.8587830531549786,
+    "colsample_bytree": 0.6359242365782171,
+    "reg_alpha": 0.006659655470812371,
+    "reg_lambda": 1.5288326822357876,
+    "smape_validacion": 38.215080506335035
+  },
+  "LSTM_calendario_abastecimiento": {
+    "window": 60,
+    "hidden_size": 120,
+    "num_layers": 1,
+    "dropout": 0.4924613955156428,
+    "batch_size": 64,
+    "learning_rate": 0.001,
+    "epocas_reajuste": 4,
+    "smape_validacion": 35.19548667163596
+  },
+  "TCN_calendario_abastecimiento": {
+    "window": 15,
+    "hidden_channels": 128,
+    "n_blocks": 3,
+    "kernel_size": 5,
+    "dropout": 0.3,
+    "n_capas_convolucionales": 6,
+    "dilataciones": [
+      1,
+      2,
+      4
+    ],
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_epochs": 100,
+    "patience": 10,
+    "variables_calendario": true,
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "epocas_optimas_folds": [
+      26,
+      3,
+      1,
+      90,
+      82
+    ],
+    "epocas_reajuste": 26,
+    "regla_epocas_reajuste": "mediana de best_epoch de los 5 folds del mejor trial",
+    "campo_receptivo": 57,
+    "smape_validacion": 34.887390121119154
+  },
+  "LSTM-XGBoost_calendario_abastecimiento": {
+    "lstm": {
+      "window": 60,
+      "hidden_size": 120,
+      "num_layers": 1,
+      "dropout": 0.4924613955156428,
+      "batch_size": 64
+    },
+    "xgboost_residual": {
+      "max_depth": 7,
+      "learning_rate": 0.006307648585248428,
+      "min_child_weight": 9,
+      "n_estimators": 300,
+      "subsample": 0.6846342997655805,
+      "colsample_bytree": 0.9532348991585711,
+      "reg_alpha": 0.12046922310990762,
+      "reg_lambda": 3.8865621901103298
+    },
+    "smape_validacion": 41.837199442679015,
+    "seleccion_anidada_lstm_por_fold": true
+  }
+}

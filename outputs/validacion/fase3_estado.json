@@ -1,0 +1,29 @@
+{
+  "estado": "COMPLETADA",
+  "fin": "2026-11-13T05:23:54",
+  "protocolo_preprocesamiento": "Fase2_preprocesamiento_causal_v4_seleccion_alpha",
+  "sha256_dataset_entrada": "8f3d3ba583c58ceefb1547b5b1ad8b3243b939fa1fcc17d39a8242f9b539a308",
+  "sha256_protocolo_fase2": "faba2eb5fb6057a5d97e8622349b939e46302953fbfd957fd438d7634223d065",
+  "alpha_ewma": 0.1,
+  "regla_seleccion_alpha": "minimo_MAE_promedio_equilibrado_por_duracion",
+  "version_python": "3.14.4",
+  "versiones_ejecucion": {
+    "torch": "2.11.0+cu130",
+    "cuda_disponible": true,
+    "cuda_version": "13.0",
+    "optuna": "4.9.0",
+    "xgboost": "3.2.0",
+    "pandas": "2.3.3",
+    "numpy": "2.4.4",
+    "statsmodels": "0.14.6"
+  },
+  "diagnosticos_ampliados": true,
+  "folds": 5,
+  "proporcion_desarrollo": 0.8,
+  "lstm_hibrido_seleccion_anidada": true,
+  "resultados": "C:\\Proyecto_Prediccion_Cebolla\\outputs\\validacion",
+  "ablacion_grupos": [
+    "Calendario",
+    "Calendario + abastecimiento"
+  ]
+}

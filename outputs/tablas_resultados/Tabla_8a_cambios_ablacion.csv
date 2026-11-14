@@ -1,0 +1,13 @@
+﻿familia,modelo,configuracion_A,configuracion_B,delta_smape_B_menos_A,delta_mae_B_menos_A,delta_rmse_B_menos_A,delta_mase_B_menos_A,delta_r2_B_menos_A
+Retiro del precio sin abastecimiento,XGBoost,Histórico,Calendario,29.696968271843865,0.4143425602588191,0.5276966286052169,10.217692856437932,-1.342411780718015
+Retiro del precio sin abastecimiento,LSTM,Histórico,Calendario,24.479549502364822,0.35747612350912233,0.45415768313439564,8.815365795984604,-1.0270914417465375
+Retiro del precio sin abastecimiento,TCN,Histórico,Calendario,23.660408089746863,0.347341952588576,0.44272550021077844,8.565457010953912,-1.0029768487216209
+Retiro del precio sin abastecimiento,LSTM-XGBoost,Histórico,Calendario,25.859403344672657,0.368409408831981,0.4656180499793223,9.084980752437517,-1.1159328718520274
+Retiro del precio con abastecimiento,XGBoost,Histórico + abastecimiento,Calendario + abastecimiento,28.393386637770682,0.4005364528987834,0.5126538208878264,9.877234071659139,-1.2726131359673811
+Retiro del precio con abastecimiento,LSTM,Histórico + abastecimiento,Calendario + abastecimiento,24.44205997087707,0.3579359202376053,0.4547225483880193,8.826704389213113,-1.0245699201913099
+Retiro del precio con abastecimiento,TCN,Histórico + abastecimiento,Calendario + abastecimiento,19.132435749753697,0.2893771257529507,0.386949818102545,7.136043636877469,-0.8858104738674408
+Retiro del precio con abastecimiento,LSTM-XGBoost,Histórico + abastecimiento,Calendario + abastecimiento,26.511178152159818,0.38160719535691084,0.49182068219999325,9.410438337611327,-1.2200735151177757
+Aporte de abastecimiento sin precio,XGBoost,Calendario,Calendario + abastecimiento,-1.3088233979959618,-0.013743705878506873,-0.01583431174181038,-0.3389199634430131,0.07026469401976931
+Aporte de abastecimiento sin precio,LSTM,Calendario,Calendario + abastecimiento,-0.09917366722324061,-0.0007028037376367591,-0.0008467350127234763,-0.01733114919462686,0.003334876677743459
+Aporte de abastecimiento sin precio,TCN,Calendario,Calendario + abastecimiento,-1.5307714311683966,-0.019840086035764093,-0.024677471588199218,-0.48925677640286835,0.09407028064154344
+Aporte de abastecimiento sin precio,LSTM-XGBoost,Calendario,Calendario + abastecimiento,0.6689646576728379,0.012891265347363012,0.02446235338277214,0.31789876899905956,-0.10297862285706993

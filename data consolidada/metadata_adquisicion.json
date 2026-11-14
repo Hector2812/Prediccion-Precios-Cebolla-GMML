@@ -1,0 +1,20 @@
+{
+  "fecha_descarga_integracion": "2026-11-12T23:18:04",
+  "mercado": "Gran mercado mayorista de lima",
+  "producto": "Cebolla cabeza roja",
+  "url_sisap": "http://sistemas.midagri.gob.pe/sisap/portal2/mayorista/",
+  "periodo_inicio": "2012-01-01",
+  "periodo_fin": "2026-09-01",
+  "total_fechas": 5358,
+  "fuentes": {
+    "Precio Promedio Cebolla Roja GMML 2012-2026.xls": {
+      "sha256": "babb1862f02d16ff4fb9112625f6bbc03591bb4198a25e9ac5440a27733088a4",
+      "bytes": 394209
+    },
+    "Volumen Total Cebolla Roja GMML 2012-2026.xls": {
+      "sha256": "a273f60089609484b9f1a0015053a07867298b60fdab59c2c4dfb675632029cf",
+      "bytes": 404973
+    }
+  },
+  "marcador_abastecimiento_puntos": "0 toneladas sólo en un registro existente"
+}

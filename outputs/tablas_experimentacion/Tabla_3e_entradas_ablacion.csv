@@ -1,0 +1,17 @@
+﻿configuracion,predictor,grupo
+Calendario,dia_semana_sin,calendario
+Calendario,dia_semana_cos,calendario
+Calendario,mes_sin,calendario
+Calendario,mes_cos,calendario
+Calendario,dia_anio_sin,calendario
+Calendario,dia_anio_cos,calendario
+Calendario + abastecimiento,dia_semana_sin,calendario
+Calendario + abastecimiento,dia_semana_cos,calendario
+Calendario + abastecimiento,mes_sin,calendario
+Calendario + abastecimiento,mes_cos,calendario
+Calendario + abastecimiento,dia_anio_sin,calendario
+Calendario + abastecimiento,dia_anio_cos,calendario
+Calendario + abastecimiento,abastecimiento_lag_1,abastecimiento
+Calendario + abastecimiento,abastecimiento_lag_7,abastecimiento
+Calendario + abastecimiento,abastecimiento_lag_14,abastecimiento
+Calendario + abastecimiento,abastecimiento_lag_30,abastecimiento

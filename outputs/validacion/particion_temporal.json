@@ -1,0 +1,20 @@
+{
+  "proporcion_implementacion": 0.8,
+  "proporcion_prueba": 0.19999999999999996,
+  "n_total": 5357,
+  "n_implementacion": 4285,
+  "n_prueba": 1072,
+  "n_objetivos_observados_desarrollo": 4243,
+  "n_objetivos_ausentes_desarrollo": 42,
+  "n_objetivos_observados_prueba": 1072,
+  "n_objetivos_ausentes_prueba": 0,
+  "protocolo_preprocesamiento": "Fase2_preprocesamiento_causal_v4_seleccion_alpha",
+  "origen_implementacion_inicio": "2012-01-01",
+  "origen_implementacion_fin": "2023-09-24",
+  "objetivo_implementacion_inicio": "2012-01-02",
+  "objetivo_implementacion_fin": "2023-09-25",
+  "origen_prueba_inicio": "2023-09-25",
+  "origen_prueba_fin": "2026-08-31",
+  "objetivo_prueba_inicio": "2023-09-26",
+  "objetivo_prueba_fin": "2026-09-01"
+}

@@ -1,0 +1,34 @@
+{
+  "estado": "COMPLETADA",
+  "fin": "2026-11-13T07:25:33",
+  "configuraciones": [
+    "Histórico",
+    "Histórico + abastecimiento",
+    "Calendario",
+    "Calendario + abastecimiento"
+  ],
+  "modelos_sin_precio": [
+    "XGBoost",
+    "LSTM",
+    "TCN",
+    "LSTM-XGBoost"
+  ],
+  "familias_Holm": [
+    "Retiro del precio sin abastecimiento",
+    "Retiro del precio con abastecimiento",
+    "Aporte de abastecimiento sin precio"
+  ],
+  "contrastes_por_familia": 4,
+  "exploratorio_post_hoc": true,
+  "shap_no_equivale_a_efecto_causal": true,
+  "explicabilidad": {
+    "XGBoost_calendario": "TreeSHAP global y local",
+    "LSTM_calendario": "TimeSHAP global y local",
+    "TCN_calendario": "Integrated Gradients global y local",
+    "LSTM-XGBoost_calendario": "TreeSHAP sólo del corrector residual",
+    "XGBoost_calendario_abastecimiento": "TreeSHAP global y local",
+    "LSTM_calendario_abastecimiento": "TimeSHAP global y local",
+    "TCN_calendario_abastecimiento": "Integrated Gradients global y local",
+    "LSTM-XGBoost_calendario_abastecimiento": "TreeSHAP sólo del corrector residual"
+  }
+}

@@ -1,0 +1,3 @@
+﻿parametro,coeficiente,error_estandar,p_valor,configuracion,predictor_exogeno_asociado
+x1,-7.497821024819186e-05,0.0008769530964509313,0.9318650553607298,Histórico + abastecimiento,abastecimiento_lag_1_estandarizado
+sigma2,0.0068264092416762,2.871370290253772e-05,0.0,Histórico + abastecimiento,

@@ -1,0 +1,27 @@
+[2026-11-12 23:20:52] INICIO FASE 2 - PREPROCESAMIENTO E INGENIERÍA DE CARACTERÍSTICAS
+Selección automática EWMA: alpha=0.10 | minimo_MAE_promedio_equilibrado_por_duracion
+   metodo  MAE_bloque_1_dias  MAE_bloque_5_dias  MAE_bloque_21_dias  MAE_promedio_equilibrado  alpha  seleccionado
+EWMA_0.10         424.449223         408.310496          407.263701                413.341140    0.1          True
+EWMA_0.20         449.810246         413.814111          410.240690                424.621682    0.2         False
+EWMA_0.30         472.779696         421.060520          416.147332                436.662516    0.3         False
+EWMA_0.40         494.170530         431.530721          422.905988                449.535746    0.4         False
+EWMA_0.50         515.199523         445.260884          430.629629                463.696678    0.5         False
+Evidencia: C:\Proyecto_Prediccion_Cebolla\outputs\tablas_experimentacion\Tabla_2d_sensibilidad_imputacion_desarrollo.csv, C:\Proyecto_Prediccion_Cebolla\outputs\tablas_experimentacion\Tabla_2e_seleccion_alpha_EWMA.csv y C:\Proyecto_Prediccion_Cebolla\data procesada\seleccion_alpha_ewma.json
+Pruebas de causalidad y rezagos: CORRECTAS (4 prefijos).
+Tablas de imputación, diccionario de variables y figura de trazabilidad generadas.
+Figura de imputación para el artículo: C:\Proyecto_Prediccion_Cebolla\Figuras\experimentacion\Figura_articulo_tratamiento_faltantes_21_dias.png
+Dataset procesado: C:\Proyecto_Prediccion_Cebolla\data procesada\dataset_modelado_base.csv
+Observaciones: 5357
+Periodo de origen: 2012-01-01 a 2026-08-31
+Periodo objetivo: 2012-01-02 a 2026-09-01
+Faltantes de precio en entradas completados con LOCF: 42
+Faltantes de abastecimiento en entradas completados con EWMA causal: 42
+EWMA alpha seleccionado con máscaras en desarrollo: 0.1
+Objetivos de precio t+1 observados: 5315
+Objetivos de precio t+1 SIN dato real: 42
+Características calendario cíclicas derivadas de fecha_target: ('dia_semana_sin', 'dia_semana_cos', 'mes_sin', 'mes_cos', 'dia_anio_sin', 'dia_anio_cos')
+Rezagos de precio: (1, 2, 3, 4, 5, 7, 14, 21, 28, 30)
+Rezagos de abastecimiento: (1, 7, 14, 30)
+Medias móviles del precio: (7, 30)
+Rangos móviles del precio: (30,)
+[2026-11-12 23:20:57] FIN FASE 2 - PREPROCESAMIENTO E INGENIERÍA DE CARACTERÍSTICAS | estado=COMPLETADA | duración=0:00:05.000604

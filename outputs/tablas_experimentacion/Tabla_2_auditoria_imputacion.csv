@@ -1,0 +1,3 @@
+﻿variable,dias_calendario_origen,dias_observados,dias_predictor_imputado,max_dias_desde_observacion,metodo,objetivos_sin_precio_real,objetivos_observados
+Precio (S/kg),5357,5315,42,21,LOCF,42,5315
+Abastecimiento (t),5357,5315,42,21,EWMA causal alfa=0.1,42,5315

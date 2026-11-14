@@ -1,0 +1,13 @@
+﻿bloque,inicio_origen,fin_origen,fechas_calendario,objetivos_observados,objetivos_ausentes,precios_entrada_imputados,abastecimientos_entrada_imputados,max_dias_sin_precio,max_dias_sin_abastecimiento
+desarrollo_80,2012-01-01,2023-09-24,4285,4243,42,42,42,21,21
+prueba_20,2023-09-25,2026-08-31,1072,1072,0,0,0,0,0
+fold_1_train,2012-01-01,2013-12-15,715,708,7,7,7,5,5
+fold_1_val,2013-12-16,2015-11-29,714,704,10,10,10,1,1
+fold_2_train,2012-01-01,2015-11-29,1429,1412,17,17,17,5,5
+fold_2_val,2015-11-30,2017-11-12,714,691,23,23,23,21,21
+fold_3_train,2012-01-01,2017-11-12,2143,2103,40,40,40,21,21
+fold_3_val,2017-11-13,2019-10-27,714,714,0,0,0,0,0
+fold_4_train,2012-01-01,2019-10-27,2857,2817,40,40,40,21,21
+fold_4_val,2019-10-28,2021-10-10,714,714,0,0,0,0,0
+fold_5_train,2012-01-01,2021-10-10,3571,3531,40,40,40,21,21
+fold_5_val,2021-10-11,2023-09-24,714,712,2,2,2,2,2

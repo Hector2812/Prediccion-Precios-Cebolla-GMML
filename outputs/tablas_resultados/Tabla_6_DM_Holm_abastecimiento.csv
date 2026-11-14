@@ -1,0 +1,11 @@
+﻿familia,configuracion,modelo_A,modelo_B,modelo_menor_perdida_cuadratica_media,dm_estadistico,p_valor,diferencial_perdida_medio_A_menos_B,menor_perdida_cuadratica_media,n,hac_nlags,pares_temporales_ausentes,equivalencia_numerica,p_valor_holm,rechaza_h0_holm,alpha
+modelos_historico_abastecimiento,Histórico + abastecimiento,SARIMAX,XGBoost,SARIMAX,-1.389634868646272,0.16463978186571826,-0.00047408846026971384,A,1072,6,0,False,0.4939193455971548,False,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,SARIMAX,LSTM,SARIMAX,-1.1843324072040042,0.23628150524359648,-0.00015889142796539818,A,1072,6,0,False,0.4939193455971548,False,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,SARIMAX,TCN,SARIMAX,-14.267581865958636,3.4845303367428026e-46,-0.00764279946932386,A,1072,6,0,False,3.4845303367428026e-45,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,SARIMAX,LSTM-XGBoost,SARIMAX,-4.4335863699562825,9.267835476835875e-06,-0.0021917990811146227,A,1072,6,0,False,5.560701286101525e-05,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,XGBoost,LSTM,LSTM,0.8320615963512032,0.405374177333675,0.00031519703230431577,B,1072,6,0,False,0.4939193455971548,False,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,XGBoost,TCN,XGBoost,-9.881588696021469,5.003329817898137e-23,-0.007168711009054147,A,1072,6,0,False,4.0026638543185094e-22,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,XGBoost,LSTM-XGBoost,XGBoost,-2.7159253710147433,0.006609081409656476,-0.0017177106208449088,A,1072,6,0,False,0.026436325638625906,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,LSTM,TCN,LSTM,-12.563134362481168,3.367243061578867e-36,-0.007483908041358463,A,1072,6,0,False,3.0305187554209807e-35,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,LSTM,LSTM-XGBoost,LSTM,-4.290990390683818,1.7787801283181348e-05,-0.002032907653149225,A,1072,6,0,False,8.893900641590674e-05,True,0.05
+modelos_historico_abastecimiento,Histórico + abastecimiento,TCN,LSTM-XGBoost,LSTM-XGBoost,7.638510545728433,2.197489592940589e-14,0.0054510003882092374,B,1072,6,0,False,1.5382427150584123e-13,True,0.05

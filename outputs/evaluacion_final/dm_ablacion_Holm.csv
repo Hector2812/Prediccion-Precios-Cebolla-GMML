@@ -1,0 +1,13 @@
+﻿familia,modelo,configuracion_A,configuracion_B,dm_estadistico,p_valor,diferencial_perdida_medio_A_menos_B,menor_perdida_cuadratica_media,n,hac_nlags,pares_temporales_ausentes,equivalencia_numerica,p_valor_holm,rechaza_h0_holm,alpha
+Retiro del precio sin abastecimiento,XGBoost,Histórico,Calendario,-7.919907545826339,2.3768724996114046e-15,-0.3628720184951765,A,1072,6,0,False,9.507489998445618e-15,True,0.05
+Retiro del precio sin abastecimiento,LSTM,Histórico,Calendario,-7.340195150484907,2.1328263932335596e-13,-0.2776366760178011,A,1072,6,0,False,2.1328263932335596e-13,True,0.05
+Retiro del precio sin abastecimiento,TCN,Histórico,Calendario,-7.885855192628293,3.123886936299534e-15,-0.2711181761269101,A,1072,6,0,False,9.507489998445618e-15,True,0.05
+Retiro del precio sin abastecimiento,LSTM-XGBoost,Histórico,Calendario,-7.820967880167142,5.241871993803159e-15,-0.3016517133792389,A,1072,6,0,False,1.0483743987606318e-14,True,0.05
+Retiro del precio con abastecimiento,XGBoost,Histórico + abastecimiento,Calendario + abastecimiento,-7.6567473031227955,1.9070134251414592e-14,-0.34400450297371465,A,1072,6,0,False,5.721040275424378e-14,True,0.05
+Retiro del precio con abastecimiento,LSTM,Histórico + abastecimiento,Calendario + abastecimiento,-7.308680045515572,2.697792881854243e-13,-0.2769550747166451,A,1072,6,0,False,2.697792881854243e-13,True,0.05
+Retiro del precio con abastecimiento,TCN,Histórico + abastecimiento,Calendario + abastecimiento,-7.769527548187611,7.877940891204334e-15,-0.2394465239902177,A,1072,6,0,False,3.1511763564817335e-14,True,0.05
+Retiro del precio con abastecimiento,LSTM-XGBoost,Histórico + abastecimiento,Calendario + abastecimiento,-7.402311711133838,1.338338857664379e-13,-0.3298023345016307,A,1072,6,0,False,2.676677715328758e-13,True,0.05
+Aporte de abastecimiento sin precio,XGBoost,Calendario,Calendario + abastecimiento,4.973351875751213,6.580505867144532e-07,0.018993494927660816,B,1072,6,0,False,2.632202346857813e-06,True,0.05
+Aporte de abastecimiento sin precio,LSTM,Calendario,Calendario + abastecimiento,0.6435811836772195,0.5198470550534084,0.000901462165981636,B,1072,6,0,False,0.5198470550534084,False,0.05
+Aporte de abastecimiento sin precio,TCN,Calendario,Calendario + abastecimiento,4.349989081180011,1.3614431085838449e-05,0.025428466218127645,B,1072,6,0,False,4.0843293257515346e-05,True,0.05
+Aporte de abastecimiento sin precio,LSTM-XGBoost,Calendario,Calendario + abastecimiento,-2.0811774459314614,0.037417667159677384,-0.027836511325914737,A,1072,6,0,False,0.07483533431935477,False,0.05

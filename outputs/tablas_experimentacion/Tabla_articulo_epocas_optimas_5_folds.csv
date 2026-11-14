@@ -1,0 +1,21 @@
+﻿modelo,configuracion,fold,mejor_epoca,epocas_ejecutadas,mse_validacion_optimo
+LSTM,Histórico,1,195,200,0.0033664484508335
+LSTM,Histórico,2,184,199,0.0004741610900964
+LSTM,Histórico,3,182,197,0.0005774199962615
+LSTM,Histórico,4,124,139,0.0003665727563202
+LSTM,Histórico,5,86,101,0.0015830076299607
+LSTM,Histórico + abastecimiento,1,126,141,0.0035729063674807
+LSTM,Histórico + abastecimiento,2,149,164,0.0004861023917328
+LSTM,Histórico + abastecimiento,3,147,162,0.0005822118837386
+LSTM,Histórico + abastecimiento,4,133,148,0.0003666261327452
+LSTM,Histórico + abastecimiento,5,97,112,0.0014759389450773
+TCN,Histórico,1,44,54,0.0040498622693121
+TCN,Histórico,2,96,100,0.000463574018795
+TCN,Histórico,3,96,100,0.0007311376393772
+TCN,Histórico,4,90,100,0.000376321026124
+TCN,Histórico,5,11,21,0.0076987906359136
+TCN,Histórico + abastecimiento,1,98,100,0.0024691917933523
+TCN,Histórico + abastecimiento,2,98,100,0.0004658444377128
+TCN,Histórico + abastecimiento,3,96,100,0.0005746282986365
+TCN,Histórico + abastecimiento,4,57,67,0.0003795834199991
+TCN,Histórico + abastecimiento,5,17,27,0.0084593566134572

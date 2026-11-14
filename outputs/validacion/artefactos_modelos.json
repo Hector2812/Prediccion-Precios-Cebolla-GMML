@@ -1,0 +1,396 @@
+{
+  "SARIMAX_historico": {
+    "modelo": "outputs/validacion/modelos/sarimax_historico.pkl",
+    "escalador_exog": null,
+    "optimizador": "lbfgs"
+  },
+  "XGBoost_historico": {
+    "modelo": "outputs/validacion/modelos/xgboost_historico.joblib",
+    "columnas": [
+      "precio_lag_1",
+      "precio_lag_2",
+      "precio_lag_3",
+      "precio_lag_4",
+      "precio_lag_5",
+      "precio_lag_7",
+      "precio_lag_14",
+      "precio_lag_21",
+      "precio_lag_28",
+      "precio_lag_30",
+      "precio_media_movil_7",
+      "precio_media_movil_30",
+      "precio_rango_movil_30",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "n_entrenamiento": 4214
+  },
+  "LSTM_historico": {
+    "modelo": "outputs/validacion/modelos/lstm_historico.pt",
+    "escaladores": "outputs/validacion/modelos/lstm_historico_scalers.joblib",
+    "epocas": 182,
+    "n_entrenamiento": 4230,
+    "columnas_secuenciales": [
+      "precio",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ]
+  },
+  "TCN_historico": {
+    "modelo": "outputs/validacion/modelos/tcn_historico.pt",
+    "escaladores": "outputs/validacion/modelos/tcn_historico_scalers.joblib",
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "hidden_channels": 64,
+    "n_blocks": 3,
+    "epocas": 90,
+    "max_epocas_validacion": 100,
+    "patience_validacion": 10,
+    "usar_calendario": true,
+    "n_entrenamiento": 4229,
+    "columnas_secuenciales": [
+      "precio",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "diagnostico_reajuste": {
+      "modelo": "TCN",
+      "configuracion": "Histórico",
+      "epocas_reajuste": 90,
+      "smape_cv_seleccion": 6.082054046408236,
+      "smape_implementacion": 5.143478247576487,
+      "mae_implementacion": 0.055827371784912885,
+      "rmse_implementacion": 0.08922631053687058,
+      "sesgo_medio_implementacion": 0.025827504694461823,
+      "correlacion_implementacion": 0.9939351298463862,
+      "media_real_implementacion": 1.2059398889541626,
+      "media_predicha_implementacion": 1.2317674160003662,
+      "hidden_channels": 64,
+      "n_blocks": 3
+    }
+  },
+  "LSTM-XGBoost_historico": {
+    "corrector_residual": "outputs/validacion/modelos/lstm_xgboost_historico_residual.joblib",
+    "modelo_base_lstm": "outputs/validacion/modelos/lstm_historico.pt",
+    "escaladores_base_lstm": "outputs/validacion/modelos/lstm_historico_scalers.joblib",
+    "columnas_corrector": [
+      "prediccion_lstm",
+      "precio_lag_1",
+      "precio_lag_2",
+      "precio_lag_3",
+      "precio_lag_4",
+      "precio_lag_5",
+      "precio_lag_7",
+      "precio_lag_14",
+      "precio_lag_21",
+      "precio_lag_28",
+      "precio_lag_30",
+      "precio_media_movil_7",
+      "precio_media_movil_30",
+      "precio_rango_movil_30",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "n_residuos_oof": 3535,
+    "epocas_oof": 182
+  },
+  "SARIMAX_historico_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/sarimax_historico_abastecimiento.pkl",
+    "escalador_exog": "outputs/validacion/modelos/sarimax_historico_abastecimiento_exog_scaler.joblib",
+    "optimizador": "lbfgs"
+  },
+  "XGBoost_historico_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/xgboost_historico_abastecimiento.joblib",
+    "columnas": [
+      "precio_lag_1",
+      "precio_lag_2",
+      "precio_lag_3",
+      "precio_lag_4",
+      "precio_lag_5",
+      "precio_lag_7",
+      "precio_lag_14",
+      "precio_lag_21",
+      "precio_lag_28",
+      "precio_lag_30",
+      "precio_media_movil_7",
+      "precio_media_movil_30",
+      "precio_rango_movil_30",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos",
+      "abastecimiento_lag_1",
+      "abastecimiento_lag_7",
+      "abastecimiento_lag_14",
+      "abastecimiento_lag_30"
+    ],
+    "n_entrenamiento": 4214
+  },
+  "LSTM_historico_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/lstm_historico_abastecimiento.pt",
+    "escaladores": "outputs/validacion/modelos/lstm_historico_abastecimiento_scalers.joblib",
+    "epocas": 133,
+    "n_entrenamiento": 4214,
+    "columnas_secuenciales": [
+      "precio",
+      "abastecimiento",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ]
+  },
+  "TCN_historico_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/tcn_historico_abastecimiento.pt",
+    "escaladores": "outputs/validacion/modelos/tcn_historico_abastecimiento_scalers.joblib",
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "hidden_channels": 128,
+    "n_blocks": 4,
+    "epocas": 96,
+    "max_epocas_validacion": 100,
+    "patience_validacion": 10,
+    "usar_calendario": true,
+    "n_entrenamiento": 4229,
+    "columnas_secuenciales": [
+      "precio",
+      "abastecimiento",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "diagnostico_reajuste": {
+      "modelo": "TCN",
+      "configuracion": "Histórico + abastecimiento",
+      "epocas_reajuste": 96,
+      "smape_cv_seleccion": 5.347268395991369,
+      "smape_implementacion": 9.928905149281238,
+      "mae_implementacion": 0.09823419893286871,
+      "rmse_implementacion": 0.1193917600567225,
+      "sesgo_medio_implementacion": 0.08453972637653351,
+      "correlacion_implementacion": 0.994308125318037,
+      "media_real_implementacion": 1.2059398889541626,
+      "media_predicha_implementacion": 1.2904796600341797,
+      "hidden_channels": 128,
+      "n_blocks": 4
+    }
+  },
+  "LSTM-XGBoost_historico_abastecimiento": {
+    "corrector_residual": "outputs/validacion/modelos/lstm_xgboost_historico_abastecimiento_residual.joblib",
+    "modelo_base_lstm": "outputs/validacion/modelos/lstm_historico_abastecimiento.pt",
+    "escaladores_base_lstm": "outputs/validacion/modelos/lstm_historico_abastecimiento_scalers.joblib",
+    "columnas_corrector": [
+      "prediccion_lstm",
+      "precio_lag_1",
+      "precio_lag_2",
+      "precio_lag_3",
+      "precio_lag_4",
+      "precio_lag_5",
+      "precio_lag_7",
+      "precio_lag_14",
+      "precio_lag_21",
+      "precio_lag_28",
+      "precio_lag_30",
+      "precio_media_movil_7",
+      "precio_media_movil_30",
+      "precio_rango_movil_30",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos",
+      "abastecimiento_lag_1",
+      "abastecimiento_lag_7",
+      "abastecimiento_lag_14",
+      "abastecimiento_lag_30"
+    ],
+    "n_residuos_oof": 3535,
+    "epocas_oof": 133
+  },
+  "XGBoost_calendario": {
+    "modelo": "outputs/validacion/modelos/xgboost_calendario.joblib",
+    "columnas": [
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "n_entrenamiento": 4243
+  },
+  "LSTM_calendario": {
+    "modelo": "outputs/validacion/modelos/lstm_calendario.pt",
+    "escaladores": "outputs/validacion/modelos/lstm_calendario_scalers.joblib",
+    "epocas": 3,
+    "n_entrenamiento": 4214,
+    "columnas_secuenciales": [
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ]
+  },
+  "TCN_calendario": {
+    "modelo": "outputs/validacion/modelos/tcn_calendario.pt",
+    "escaladores": "outputs/validacion/modelos/tcn_calendario_scalers.joblib",
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "hidden_channels": 64,
+    "n_blocks": 4,
+    "epocas": 13,
+    "max_epocas_validacion": 100,
+    "patience_validacion": 10,
+    "usar_calendario": true,
+    "n_entrenamiento": 4185,
+    "columnas_secuenciales": [
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "diagnostico_reajuste": {
+      "modelo": "TCN",
+      "configuracion": "Calendario",
+      "epocas_reajuste": 13,
+      "smape_cv_seleccion": 34.559138917806216,
+      "smape_implementacion": 42.7590798550696,
+      "mae_implementacion": 0.5361325260630075,
+      "rmse_implementacion": 0.7452053899582569,
+      "sesgo_medio_implementacion": 0.17958801984786987,
+      "correlacion_implementacion": 0.38105157174406,
+      "media_real_implementacion": 1.2092519998550415,
+      "media_predicha_implementacion": 1.3888400793075562,
+      "hidden_channels": 64,
+      "n_blocks": 4
+    }
+  },
+  "LSTM-XGBoost_calendario": {
+    "corrector_residual": "outputs/validacion/modelos/lstm_xgboost_calendario_residual.joblib",
+    "modelo_base_lstm": "outputs/validacion/modelos/lstm_calendario.pt",
+    "escaladores_base_lstm": "outputs/validacion/modelos/lstm_calendario_scalers.joblib",
+    "columnas_corrector": [
+      "prediccion_lstm",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "n_residuos_oof": 3535,
+    "epocas_oof": 3
+  },
+  "XGBoost_calendario_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/xgboost_calendario_abastecimiento.joblib",
+    "columnas": [
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos",
+      "abastecimiento_lag_1",
+      "abastecimiento_lag_7",
+      "abastecimiento_lag_14",
+      "abastecimiento_lag_30"
+    ],
+    "n_entrenamiento": 4214
+  },
+  "LSTM_calendario_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/lstm_calendario_abastecimiento.pt",
+    "escaladores": "outputs/validacion/modelos/lstm_calendario_abastecimiento_scalers.joblib",
+    "epocas": 4,
+    "n_entrenamiento": 4185,
+    "columnas_secuenciales": [
+      "abastecimiento",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ]
+  },
+  "TCN_calendario_abastecimiento": {
+    "modelo": "outputs/validacion/modelos/tcn_calendario_abastecimiento.pt",
+    "escaladores": "outputs/validacion/modelos/tcn_calendario_abastecimiento_scalers.joblib",
+    "arquitectura_tcn": "TCN_residual_2conv_causal_v2",
+    "hidden_channels": 128,
+    "n_blocks": 3,
+    "epocas": 26,
+    "max_epocas_validacion": 100,
+    "patience_validacion": 10,
+    "usar_calendario": true,
+    "n_entrenamiento": 4229,
+    "columnas_secuenciales": [
+      "abastecimiento",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos"
+    ],
+    "diagnostico_reajuste": {
+      "modelo": "TCN",
+      "configuracion": "Calendario + abastecimiento",
+      "epocas_reajuste": 26,
+      "smape_cv_seleccion": 34.887390121119154,
+      "smape_implementacion": 42.78830560624409,
+      "mae_implementacion": 0.5374484313566033,
+      "rmse_implementacion": 0.7437294543956221,
+      "sesgo_medio_implementacion": 0.19977790117263794,
+      "correlacion_implementacion": 0.39160869538071297,
+      "media_real_implementacion": 1.2059398889541626,
+      "media_predicha_implementacion": 1.4057178497314453,
+      "hidden_channels": 128,
+      "n_blocks": 3
+    }
+  },
+  "LSTM-XGBoost_calendario_abastecimiento": {
+    "corrector_residual": "outputs/validacion/modelos/lstm_xgboost_calendario_abastecimiento_residual.joblib",
+    "modelo_base_lstm": "outputs/validacion/modelos/lstm_calendario_abastecimiento.pt",
+    "escaladores_base_lstm": "outputs/validacion/modelos/lstm_calendario_abastecimiento_scalers.joblib",
+    "columnas_corrector": [
+      "prediccion_lstm",
+      "dia_semana_sin",
+      "dia_semana_cos",
+      "mes_sin",
+      "mes_cos",
+      "dia_anio_sin",
+      "dia_anio_cos",
+      "abastecimiento_lag_1",
+      "abastecimiento_lag_7",
+      "abastecimiento_lag_14",
+      "abastecimiento_lag_30"
+    ],
+    "n_residuos_oof": 3535,
+    "epocas_oof": 4
+  }
+}

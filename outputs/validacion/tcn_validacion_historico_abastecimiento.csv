@@ -1,0 +1,6 @@
+﻿modelo,configuracion,fold,smape,mae,rmse,n,epoca_optima,epocas_ejecutadas,alcanzo_techo,hidden_channels,n_blocks,n_capas_convolucionales,campo_receptivo,epocas_reajuste_mediana
+TCN,Histórico + abastecimiento,1,7.003479595263904,0.08440295767716387,0.12621504962536004,704,98,100,False,128,4,8,121,96
+TCN,Histórico + abastecimiento,2,4.962469444933496,0.04348762982488541,0.06345528981323656,691,98,100,False,128,4,8,121,96
+TCN,Histórico + abastecimiento,3,4.316780706462053,0.045347389219855726,0.07550992811990172,714,96,100,False,128,4,8,121,96
+TCN,Histórico + abastecimiento,4,3.8199608735551505,0.036594374340121485,0.06137114311715394,714,57,67,False,128,4,8,121,96
+TCN,Histórico + abastecimiento,5,6.63365135974224,0.15389410640751378,0.28972051187197273,712,17,27,False,128,4,8,121,96
