@@ -141,6 +141,6 @@ Los directorios anteriores son los utilizados por los scripts. Se recomienda con
 
 ## 8. Fuente de datos y uso académico
 
-**Fuente:** [Sistema de Información de Abastecimiento y Precios (SISAP), MIDAGRI](https://sistemas.midagri.gob.pe/sisap/portal2/mayorista/).
+**Fuente:** [Sistema de Información de Abastecimiento y Precios (SISAP), MIDAGRI](http://sistemas.midagri.gob.pe/sisap/portal2/mayorista/).
 
 Antes de publicar los datos descargados, verifica las condiciones de reutilización y redistribución del portal. Revisa también que ningún archivo o metadato revele datos privados o credenciales. El repositorio acompaña una investigación académica y los resultados se limitan al mercado, horizonte y condiciones experimentales indicados.
